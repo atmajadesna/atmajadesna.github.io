@@ -570,6 +570,12 @@ body {
   margin-bottom: 20px;
 }
 
+.project-links {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
 .project-link {
   font-size: 13px;
   font-weight: 600;
@@ -580,7 +586,11 @@ body {
   gap: 4px;
   transition: gap var(--transition);
 }
+.project-link.secondary {
+  color: var(--text-muted);
+}
 .project-link:hover { gap: 8px; color: var(--accent); }
+.project-link.secondary:hover { color: var(--text); }
 .project-link.muted {
   color: var(--text-faint);
   cursor: default;
