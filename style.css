@@ -674,6 +674,15 @@ body {
   font-size: 24px;
   margin-bottom: 6px;
 }
+
+/* tombol email: reset gaya bawaan <button> */
+button.contact-card {
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+  border: 1px solid var(--border);
+}
 .contact-label {
   font-size: 12px;
   text-transform: uppercase;

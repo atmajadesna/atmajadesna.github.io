@@ -141,7 +141,22 @@
     });
   }
 
-  /* ---------- 5. TAHUN DI FOOTER ---------- */
+  /* ---------- 5. TOMBOL EMAIL ANTI-BOT ---------- */
+  /* Alamat disusun saat diklik, jadi tidak ada string email utuh
+     di dalam HTML yang bisa dipanen bot spam. */
+  function initEmailCard() {
+    const card = document.getElementById("emailCard");
+    if (!card) return;
+
+    card.addEventListener("click", function () {
+      const user = card.getAttribute("data-u");
+      const domain = card.getAttribute("data-d");
+      if (!user || !domain) return;
+      window.location.href = "mailto:" + user + "@" + domain;
+    });
+  }
+
+  /* ---------- 6. TAHUN DI FOOTER ---------- */
   function initYear() {
     const el = document.getElementById("year");
     if (el) el.textContent = String(new Date().getFullYear());
@@ -153,6 +168,7 @@
     initNav();
     initReveal();
     initActiveNav();
+    initEmailCard();
     initYear();
 
     const themeBtn = document.getElementById("themeToggle");
