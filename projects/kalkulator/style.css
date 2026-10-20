@@ -1,0 +1,153 @@
+/* =========================================================
+   KALKULATOR — style.css
+   ========================================================= */
+
+.calc {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 24px;
+}
+
+.calc-display {
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  text-align: right;
+  margin-bottom: 16px;
+  min-height: 86px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.calc-expr {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-faint);
+  min-height: 18px;
+  word-break: break-all;
+}
+
+.calc-result {
+  font-family: var(--font-mono);
+  font-size: clamp(28px, 6vw, 36px);
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.1;
+  word-break: break-all;
+}
+
+/* Keypad */
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.key {
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 600;
+  height: 52px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all var(--transition);
+  user-select: none;
+}
+.key:hover {
+  background: var(--border);
+  border-color: var(--text-faint);
+  transform: translateY(-1px);
+}
+.key:active { transform: translateY(0); }
+
+.key-zero { grid-column: span 2; }
+
+.key-fn {
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.key-op {
+  color: var(--primary-light);
+  background: var(--primary-soft);
+  border-color: rgba(99, 102, 241, 0.3);
+  font-size: 20px;
+}
+.key-op:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+.key-eq {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  font-size: 22px;
+}
+.key-eq:hover {
+  background: var(--primary-light);
+}
+
+/* Riwayat */
+.history {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+}
+
+.history-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.history-head h2 {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.btn-small {
+  padding: 4px 10px;
+  font-size: 11px;
+}
+
+.history-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.history-item:hover {
+  border-color: var(--primary);
+  transform: translateX(2px);
+}
+
+.hist-expr { color: var(--text-muted); }
+.hist-res { color: var(--primary-light); font-weight: 700; }

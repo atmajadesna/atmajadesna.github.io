@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kuis Dasar Web — Atmaja Desna Adinata</title>
+<meta name="description" content="Kuis interaktif 10 soal tentang dasar HTML, CSS, dan JavaScript, lengkap dengan pembahasan.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%236366f1'/><text x='50' y='70' font-size='48' font-family='sans-serif' font-weight='bold' fill='white' text-anchor='middle'>?</text></svg>">
+<link rel="stylesheet" href="../assets/base.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="back" href="../../">← Portfolio</a>
+  <button class="theme-toggle" id="themeToggle" aria-label="Ganti tema terang/gelap">
+    <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>
+  </button>
+</header>
+
+<main class="app app--narrow">
+
+  <!-- ============ LAYAR MULAI ============ -->
+  <section class="screen" id="screenStart">
+    <div class="start-box card">
+      <span class="start-icon" aria-hidden="true">🎯</span>
+      <h1>Kuis Dasar Web</h1>
+      <p class="app-sub">
+        10 soal tentang HTML, CSS, dan JavaScript. Tiap jawaban langsung
+        dapat pembahasan, jadi salah pun tetap belajar.
+      </p>
+
+      <ul class="start-facts">
+        <li><span class="mono">10</span> soal</li>
+        <li><span class="mono">4</span> pilihan</li>
+        <li>tanpa batas waktu</li>
+      </ul>
+
+      <button class="btn btn-block" id="btnStart" type="button">Mulai Kuis</button>
+    </div>
+  </section>
+
+  <!-- ============ LAYAR SOAL ============ -->
+  <section class="screen" id="screenQuiz" hidden>
+    <div class="quiz-head">
+      <div class="quiz-progress-text">
+        <span>Soal <strong id="qNum">1</strong> / <span id="qTotal">10</span></span>
+        <span class="mono faint" id="qScore">Skor 0</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="qProgress"></div>
+      </div>
+    </div>
+
+    <div class="card question-card">
+      <span class="badge badge-primary" id="qTopic">HTML</span>
+      <h2 class="question-text" id="qText">—</h2>
+
+      <div class="options" id="options" role="group" aria-label="Pilihan jawaban"></div>
+
+      <div class="feedback" id="feedback" hidden>
+        <p class="feedback-title" id="fbTitle"></p>
+        <p class="feedback-text" id="fbText"></p>
+      </div>
+
+      <button class="btn btn-block" id="btnNext" type="button" hidden>Soal Berikutnya →</button>
+    </div>
+  </section>
+
+  <!-- ============ LAYAR HASIL ============ -->
+  <section class="screen" id="screenResult" hidden>
+    <div class="card result-box">
+      <div class="score-ring" id="scoreRing">
+        <span class="score-num" id="scoreNum">0</span>
+        <span class="score-of">/ 10</span>
+      </div>
+
+      <h2 class="result-title" id="resultTitle">Selesai!</h2>
+      <p class="app-sub center" id="resultMsg"></p>
+
+      <div class="result-stats">
+        <div class="stat">
+          <span class="stat-num" id="statBenar">0</span>
+          <span class="stat-label">Benar</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" id="statSalah">0</span>
+          <span class="stat-label">Salah</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" id="statPersen">0%</span>
+          <span class="stat-label">Nilai</span>
+        </div>
+      </div>
+
+      <button class="btn btn-block" id="btnRestart" type="button">Ulangi Kuis</button>
+      <button class="btn btn-ghost btn-block" id="btnReview" type="button" style="margin-top:8px">Lihat Pembahasan</button>
+    </div>
+
+    <div class="review" id="reviewBox" hidden>
+      <h3 class="review-title">Pembahasan</h3>
+      <ul class="review-list" id="reviewList"></ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="app-footer">
+  <p>Dibuat oleh <strong>Atmaja Desna Adinata</strong> · HTML, CSS, JavaScript murni</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

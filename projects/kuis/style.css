@@ -1,0 +1,285 @@
+/* =========================================================
+   KUIS — style.css
+   ========================================================= */
+
+.screen[hidden] { display: none; }
+
+/* ================= LAYAR MULAI ================= */
+.start-box {
+  text-align: center;
+  padding: 36px 26px;
+}
+.start-icon {
+  font-size: 42px;
+  display: block;
+  margin-bottom: 14px;
+}
+.start-box h1 {
+  font-size: clamp(24px, 5vw, 30px);
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  margin-bottom: 10px;
+}
+.start-box .app-sub { margin-bottom: 22px; }
+
+.start-facts {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 26px;
+}
+.start-facts li {
+  font-size: 12px;
+  color: var(--text-muted);
+  background: var(--bg-input);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-full);
+  padding: 5px 12px;
+}
+.start-facts .mono {
+  color: var(--primary-light);
+  font-weight: 700;
+}
+
+/* ================= PROGRESS ================= */
+.quiz-head { margin-bottom: 18px; }
+
+.quiz-progress-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  font-family: var(--font-mono);
+}
+.quiz-progress-text strong { color: var(--primary-light); }
+
+.progress-track {
+  height: 7px;
+  background: var(--bg-input);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+}
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--primary), var(--primary-light));
+  border-radius: var(--radius-full);
+  transition: width 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* ================= SOAL ================= */
+.question-card { padding: 24px; }
+
+.question-text {
+  font-size: clamp(17px, 3.5vw, 20px);
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 14px 0 20px;
+  letter-spacing: -0.3px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 13px 15px;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition);
+  width: 100%;
+}
+.option:hover:not(:disabled) {
+  border-color: var(--primary);
+  background: var(--primary-soft);
+  transform: translateX(2px);
+}
+.option:disabled { cursor: default; }
+
+.option-key {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-faint);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  min-width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 20px;
+  margin-top: 1px;
+}
+.option-text { flex: 1; line-height: 1.5; }
+
+/* status jawaban */
+.option.is-correct {
+  border-color: var(--green);
+  background: var(--green-soft);
+}
+.option.is-correct .option-key {
+  color: #4ade80;
+  border-color: rgba(34, 197, 94, 0.5);
+}
+
+.option.is-wrong {
+  border-color: var(--red);
+  background: var(--red-soft);
+}
+.option.is-wrong .option-key {
+  color: #f87171;
+  border-color: rgba(239, 68, 68, 0.5);
+}
+
+/* ================= FEEDBACK ================= */
+.feedback {
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  border-left: 3px solid var(--border);
+  background: var(--bg-input);
+}
+.feedback[hidden] { display: none; }
+.feedback.is-correct {
+  border-left-color: var(--green);
+  background: var(--green-soft);
+}
+.feedback.is-wrong {
+  border-left-color: var(--red);
+  background: var(--red-soft);
+}
+.feedback-title {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.feedback.is-correct .feedback-title { color: #4ade80; }
+.feedback.is-wrong .feedback-title { color: #f87171; }
+
+.feedback-text {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ================= HASIL ================= */
+.result-box {
+  text-align: center;
+  padding: 32px 24px;
+}
+
+.score-ring {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  border: 4px solid var(--primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-soft);
+}
+.score-num {
+  font-family: var(--font-mono);
+  font-size: 38px;
+  font-weight: 800;
+  color: var(--primary-light);
+  line-height: 1;
+}
+.score-of {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-faint);
+  margin-top: 2px;
+}
+
+.result-title {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.result-box .app-sub { margin-bottom: 22px; }
+
+.result-stats {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.stat {
+  flex: 1 1 90px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  padding: 12px 8px;
+}
+.stat-num {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+}
+.stat-label {
+  font-size: 11px;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ================= REVIEW ================= */
+.review { margin-top: 20px; }
+.review-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.review-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.review-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 13px 15px;
+}
+.review-item.ok { border-left-color: var(--green); }
+.review-item.no { border-left-color: var(--red); }
+
+.review-q {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+.review-a {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.review-a strong { color: #4ade80; }
+.review-a .salah { color: #f87171; text-decoration: line-through; }
