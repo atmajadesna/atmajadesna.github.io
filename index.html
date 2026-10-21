@@ -10,7 +10,7 @@
 <meta property="og:description" content="Mahasiswa Teknologi Informasi · Web Development & Data">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%236366f1'/><text x='50' y='70' font-size='52' font-family='sans-serif' font-weight='bold' fill='white' text-anchor='middle'>AD</text></svg>">
-<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 <a class="skip-link" href="#main">Lewati ke konten</a>
@@ -40,25 +40,75 @@
 
 <main id="main">
 
-  <!-- ============ HERO ============ -->
+  <!-- ============ HERO / BIODATA ============ -->
   <section class="hero" id="top">
     <div class="hero-glow" aria-hidden="true"></div>
     <div class="container hero-inner">
-      <p class="eyebrow reveal">Halo, saya</p>
-      <h1 class="hero-title reveal">Atmaja Desna<br><span class="grad">Adinata</span></h1>
-      <p class="hero-role reveal">Mahasiswa Teknologi Informasi · Web Development &amp; Data</p>
-      <p class="hero-desc reveal">
-        Saya belajar membangun aplikasi web dan mengolah data menjadi sesuatu yang berguna.
-        Saat ini menempuh studi S1 Teknologi Informasi di STMIK AMIKOM Surakarta.
-      </p>
-      <div class="hero-actions reveal">
-        <a class="btn btn-primary" href="#projects">Lihat Project</a>
-        <a class="btn btn-ghost" href="#contact">Hubungi Saya</a>
+      <div class="hero-grid">
+
+        <div class="hero-copy">
+          <p class="status-pill reveal">
+            <span class="status-dot" aria-hidden="true"></span>
+            Terbuka untuk magang dan proyek
+          </p>
+
+          <h1 class="hero-title reveal">Atmaja Desna<br><span class="grad">Adinata</span></h1>
+
+          <p class="hero-role reveal">Web developer — Laravel, JavaScript, dan data</p>
+
+          <p class="hero-desc reveal">
+            Membangun aplikasi web yang perhitungannya bisa diuji: pembulatan tanpa selisih,
+            jadwal tanpa benturan, data yang tidak hilang. Mahasiswa S1 Teknologi Informasi,
+            STMIK AMIKOM Surakarta.
+          </p>
+
+          <div class="hero-actions reveal">
+            <a class="btn btn-primary" href="#projects">
+              Lihat 13 project
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="#contact">Hubungi saya</a>
+          </div>
+
+          <ul class="hero-meta reveal">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+              Surakarta, Jawa Tengah
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 9l9-4 9 4-9 4-9-4z"/><path d="M7 11v5c0 1.7 2.2 3 5 3s5-1.3 5-3v-5"/></svg>
+              S1 Teknologi Informasi
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+              Angkatan 2024
+            </li>
+          </ul>
+        </div>
+
+        <aside class="id-card reveal" aria-label="Ringkasan biodata">
+          <div class="id-card__top">
+            <span class="id-card__mono" aria-hidden="true">AD</span>
+            <span class="id-card__label">biodata</span>
+          </div>
+
+          <dl class="id-card__rows">
+            <div><dt>Nama lengkap</dt><dd>Atmaja Desna Adinata</dd></div>
+            <div><dt>Domisili</dt><dd>Surakarta, Jawa Tengah</dd></div>
+            <div><dt>Program studi</dt><dd>S1 Teknologi Informasi</dd></div>
+            <div><dt>Kampus</dt><dd>STMIK AMIKOM Surakarta</dd></div>
+            <div><dt>Fokus</dt><dd>Web · Laravel · Data</dd></div>
+            <div><dt>Status</dt><dd>Mahasiswa aktif</dd></div>
+          </dl>
+
+          <div class="id-card__foot">
+            <span>13 project selesai</span>
+            <span class="id-card__dot" aria-hidden="true">·</span>
+            <span>menulis kode sejak 2024</span>
+          </div>
+        </aside>
+
       </div>
-      <ul class="hero-meta reveal">
-        <li><span class="pin" aria-hidden="true">📍</span> Surakarta, Indonesia</li>
-        <li><span class="pin" aria-hidden="true">🎓</span> S1 Teknologi Informasi</li>
-      </ul>
     </div>
     <a class="scroll-hint" href="#about" aria-label="Gulir ke bawah">
       <span></span>
@@ -72,47 +122,65 @@
         <span class="section-num">01</span>
         <h2>Tentang Saya</h2>
       </header>
+
       <div class="about-grid">
         <div class="about-text reveal">
           <p>
             Saya <strong>Atmaja Desna Adinata</strong>, mahasiswa program studi
             <strong>Teknologi Informasi</strong> di STMIK AMIKOM Surakarta.
             Saya tertarik pada pengembangan web, pengolahan data, dan cara teknologi
-            bisa menyelesaikan masalah sehari-hari.
+            menyelesaikan masalah sehari-hari.
           </p>
           <p>
-            Saya percaya cara terbaik belajar pemrograman adalah dengan
-            <em>membangun sesuatu</em> — bukan hanya menonton tutorial.
-            Karena itu setiap project di halaman ini adalah hasil praktik langsung,
-            bukan sekadar tugas yang disalin.
+            Cara belajar yang paling bekerja bagi saya adalah <em>membangun sesuatu</em>,
+            bukan menonton tutorial. Karena itu seluruh project di halaman ini adalah hasil
+            praktik langsung: ada yang berawal dari tugas kuliah, ada yang dari masalah
+            yang saya alami sendiri.
           </p>
           <p>
-            Saat ini saya sedang memperdalam JavaScript, Python, dan visualisasi data
-            untuk memperkuat dasar sebelum masuk ke dunia kerja.
+            Yang saya kejar bukan tampilan yang ramai, melainkan aplikasi yang
+            <strong>hitungannya bisa dipertanggungjawabkan</strong> — pembulatan uang yang
+            tidak menyisakan selisih, jadwal yang tidak bertabrakan, tanggal yang tidak
+            saling menimpa.
           </p>
+
+          <blockquote class="about-quote">
+            Kalau hitungannya belum bisa saya jelaskan tanpa membuka kode,
+            berarti pekerjaannya belum selesai.
+          </blockquote>
         </div>
-        <ul class="facts reveal">
-          <li>
-            <span class="facts-label">Nama</span>
-            <span class="facts-value">Atmaja Desna Adinata</span>
-          </li>
-          <li>
-            <span class="facts-label">Status</span>
-            <span class="facts-value">Mahasiswa aktif</span>
-          </li>
-          <li>
-            <span class="facts-label">Program Studi</span>
-            <span class="facts-value">S1 Teknologi Informasi</span>
-          </li>
-          <li>
-            <span class="facts-label">Kampus</span>
-            <span class="facts-value">STMIK AMIKOM Surakarta</span>
-          </li>
-          <li>
-            <span class="facts-label">Lokasi</span>
-            <span class="facts-value">Surakarta, Jawa Tengah</span>
-          </li>
-        </ul>
+
+        <div class="about-side reveal">
+          <h3 class="about-side__title">Prinsip kerja</h3>
+          <ol class="principles">
+            <li>
+              <span class="principles__num">01</span>
+              <div>
+                <b>Rumuskan dulu, kode kemudian</b>
+                <p>Besaran apa yang dihitung, dari mana angkanya, dan kondisi apa yang dinyatakan salah.</p>
+              </div>
+            </li>
+            <li>
+              <span class="principles__num">02</span>
+              <div>
+                <b>Uji dengan angka, bukan perasaan</b>
+                <p>Bunga, pajak, dan pembulatan dihitung terpisah, lalu dibandingkan dengan keluaran aplikasi.</p>
+              </div>
+            </li>
+            <li>
+              <span class="principles__num">03</span>
+              <div>
+                <b>Layar sempit lebih dulu</b>
+                <p>Kalau masih terbaca di 320 piksel, tampilan di layar besar hampir pasti ikut rapi.</p>
+              </div>
+            </li>
+          </ol>
+
+          <div class="about-now">
+            <span class="about-now__label">Sedang dipelajari</span>
+            <p>Laravel, pengujian otomatis, dan visualisasi data.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>

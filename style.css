@@ -500,7 +500,7 @@ body {
 /* ================= PROJECTS ================= */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 24px;
 }
 
@@ -799,4 +799,179 @@ button.contact-card {
   .project-card--lebar .tags,
   .project-card--lebar .project-links { justify-content: flex-start; }
   .project-card--lebar p { margin-bottom: 20px; }
+}
+
+/* =========================================================
+   BIODATA — hero dua kolom + kartu identitas
+   ========================================================= */
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+  gap: 56px;
+  align-items: center;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  padding: 6px 14px 6px 11px;
+  margin-bottom: 22px;
+}
+.status-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.18);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .status-dot { animation: denyut 2.6s ease-in-out infinite; }
+}
+@keyframes denyut {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+
+.hero-title { font-size: clamp(40px, 6.4vw, 68px); letter-spacing: -2px; }
+.hero-meta li svg { width: 15px; height: 15px; opacity: 0.7; flex: none; }
+
+/* kartu identitas */
+.id-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 26px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.id-card::before {
+  content: "";
+  position: absolute;
+  top: -120px; right: -90px;
+  width: 260px; height: 260px;
+  background: radial-gradient(circle, var(--primary-glow), transparent 70%);
+  pointer-events: none;
+}
+.id-card__top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.id-card__mono {
+  display: grid;
+  place-items: center;
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, var(--primary-glow), transparent);
+  font-family: var(--font-mono);
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--primary-light);
+}
+.id-card__label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-faint);
+}
+.id-card__rows { position: relative; margin: 0; padding: 6px 0 0; }
+.id-card__rows > div {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 12px;
+  align-items: baseline;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.id-card__rows > div:last-child { border-bottom: 0; }
+.id-card__rows dt {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--text-faint);
+}
+.id-card__rows dd { margin: 0; font-size: 13.5px; font-weight: 600; color: var(--text); }
+.id-card__foot {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-subtle);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-faint);
+}
+
+/* tentang — prinsip kerja */
+.about-side { display: grid; gap: 22px; align-content: start; }
+.about-side__title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-faint);
+}
+.principles { list-style: none; display: grid; gap: 18px; }
+.principles li { display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 14px; }
+.principles__num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--primary-light);
+  padding-top: 2px;
+}
+.principles b { display: block; font-size: 14px; color: var(--text); margin-bottom: 3px; }
+.principles p { font-size: 13px; line-height: 1.6; color: var(--text-muted); }
+
+.about-quote {
+  border-left: 2px solid var(--primary);
+  padding: 4px 0 4px 18px;
+  margin-top: 4px;
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.about-now {
+  display: grid;
+  gap: 4px;
+  border-top: 1px solid var(--border);
+  padding-top: 18px;
+}
+.about-now__label {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-faint);
+}
+.about-now p { font-size: 13.5px; color: var(--text-muted); }
+
+@media (max-width: 960px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .id-card { max-width: 520px; }
+  .hero { min-height: auto; padding: 64px 0 72px; }
+}
+@media (max-width: 480px) {
+  .hero-title { letter-spacing: -1px; }
+  .id-card { padding: 20px; }
+  .id-card__rows > div { grid-template-columns: 96px minmax(0, 1fr); gap: 10px; }
+  .hero-meta { gap: 14px; }
 }
