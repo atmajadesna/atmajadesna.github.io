@@ -775,3 +775,28 @@ button.contact-card {
     padding: 60px 0;
   }
 }
+
+/* kartu lebar — dipakai bila jumlah kartu menyisakan satu slot di baris terakhir */
+.project-card--lebar {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  column-gap: 44px;
+  align-items: start;
+}
+.project-card--lebar .project-top { grid-column: 1 / -1; }
+.project-card--lebar h3 { grid-column: 1; font-size: 22px; }
+.project-card--lebar p { grid-column: 1; grid-row: 3; margin-bottom: 0; max-width: 62ch; }
+.project-card--lebar .tags { grid-column: 2; grid-row: 2; justify-content: flex-end; margin-bottom: 12px; }
+.project-card--lebar .project-links { grid-column: 2; grid-row: 3; justify-content: flex-end; }
+
+@media (max-width: 760px) {
+  .project-card--lebar { grid-template-columns: minmax(0, 1fr); column-gap: 0; }
+  .project-card--lebar h3,
+  .project-card--lebar p,
+  .project-card--lebar .tags,
+  .project-card--lebar .project-links { grid-column: 1; grid-row: auto; }
+  .project-card--lebar .tags,
+  .project-card--lebar .project-links { justify-content: flex-start; }
+  .project-card--lebar p { margin-bottom: 20px; }
+}
