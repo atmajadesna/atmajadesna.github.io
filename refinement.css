@@ -1,0 +1,16 @@
+/* Hallmark · macrostructure: portfolio catalogue · tone: technical editorial · anchor hue: blue */
+:root { --primary: #3b82f6; --primary-light: #93bbff; --accent: #7dd3c7; --text-faint: #a1aec2; }
+[data-theme="light"] { --primary: #195acb; --primary-light: #195acb; --accent: #087566; --text-faint: #526176; }
+html, body { overflow-x: clip; }
+html { scroll-padding-top: 100px; }
+.hero-glow { display: none; }
+.hero-title .grad { background: none; color: var(--primary-light); -webkit-text-fill-color: currentColor; }
+h1,h2,h3 { font-style: normal; overflow-wrap: anywhere; }
+:focus-visible { outline: 3px solid var(--primary-light); outline-offset: 4px; }
+.btn, .theme-toggle, .nav-toggle, .filter-btn { min-height: 44px; }
+.theme-toggle, .nav-toggle { min-width: 44px; }
+.project-card, .skill-card { min-width: 0; box-shadow: none; }
+.project-card:hover, .skill-card:hover { transform: none; }
+.hero-title { letter-spacing: -.045em; }
+@media(max-width:414px) { .hero-title { font-size: clamp(2rem, 10vw, 2.6rem); } .hero-actions { align-items: stretch; } .hero-actions .btn { white-space: nowrap; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation-duration:.01ms!important; transition-duration:.01ms!important; } }
