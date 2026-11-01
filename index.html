@@ -17,6 +17,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="atelier.css?v=atelier1">
 <link rel="stylesheet" href="vivid.css?v=vivid1">
+<link rel="stylesheet" href="showcase.css?v=showcase1">
 </head>
 <body>
 <a class="skip-link" href="#main">Lewati ke konten</a>
@@ -119,6 +120,23 @@
     <a class="scroll-hint" href="#about" aria-label="Gulir ke bawah">
       <span></span>
     </a>
+  </section>
+
+  <section class="selected-showcase section" id="selected" aria-labelledby="selectedTitle">
+    <div class="container">
+      <header class="showcase-head"><div><p class="showcase-intro">Dari ide ke aplikasi yang bisa dicoba.</p><h2 id="selectedTitle">Karya pilihan.</h2></div><a class="showcase-all" href="#projects">Jelajahi semua proyek ↗</a></header>
+      <div class="selected-grid">
+        <article class="selected-card selected-main">
+          <a class="selected-image" href="https://atmajadesna.github.io/atmajacar/" target="_blank" rel="noopener"><img src="assets/atmajacar-desktop.jpg" alt="Tampilan aplikasi AtmajaCar dengan daftar mobil rental" width="1200" height="750" loading="lazy"></a>
+          <div class="selected-content"><p class="selected-category">Frontend · Alur pemesanan</p><h3>AtmajaCar</h3><p>Dari memilih tanggal sampai rincian biaya. Prototipe rental yang membuat aturan ketersediaan dan harga lebih mudah dipahami.</p><p class="selected-note">Simulasi browser, tanpa reservasi atau pembayaran sungguhan.</p><div class="selected-links"><a href="https://atmajadesna.github.io/atmajacar/" target="_blank" rel="noopener">Coba demo ↗</a><a href="https://github.com/atmajadesna/atmajacar" target="_blank" rel="noopener">Pelajari kode ↗</a></div></div>
+        </article>
+        <article class="selected-card">
+          <a class="selected-image" href="https://github.com/atmajadesna/stokara" target="_blank" rel="noopener"><img src="assets/stokara.png" alt="Dasbor Stokara berisi ringkasan stok dan penjualan dengan data contoh" width="960" height="667" loading="lazy"></a>
+          <div class="selected-content"><p class="selected-category">Backend · Laravel &amp; SQLite</p><h3>Stokara</h3><p>Menelusuri stok, modal, dan laba kotor melalui pencatatan batch dan alokasi biaya FIFO.</p><p class="selected-note">Prototipe lokal. Panduan menjalankan tersedia di repository.</p><div class="selected-links"><a href="https://github.com/atmajadesna/stokara" target="_blank" rel="noopener">Kode &amp; studi teknis ↗</a></div></div>
+        </article>
+      </div>
+      <div class="engineering-strip"><strong>Bukan hanya tampilannya.</strong><p>Jelajahi cara kerja, keputusan teknis, dan batasan tiap aplikasi langsung di repository.</p><a href="https://github.com/atmajadesna" target="_blank" rel="noopener">Lihat GitHub ↗</a></div>
+    </div>
   </section>
 
   <!-- ============ TENTANG ============ -->
@@ -237,7 +255,7 @@
     <div class="container">
       <header class="section-head reveal">
         <span class="section-num">03</span>
-        <h2>Project</h2>
+        <h2>Koleksi proyek</h2>
       </header>
       <p class="section-sub reveal">Hal-hal yang saya bangun untuk belajar dan menyelesaikan masalah nyata.</p>
 
