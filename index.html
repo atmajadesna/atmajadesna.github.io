@@ -12,6 +12,10 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%236366f1'/><text x='50' y='70' font-size='52' font-family='sans-serif' font-weight='bold' fill='white' text-anchor='middle'>AD</text></svg>">
 <link rel="stylesheet" href="style.css?v=3">
 <link rel="stylesheet" href="refinement.css?v=4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="atelier.css?v=atelier1">
 </head>
 <body>
 <a class="skip-link" href="#main">Lewati ke konten</a>
@@ -236,6 +240,12 @@
       </header>
       <p class="section-sub reveal">Hal-hal yang saya bangun untuk belajar dan menyelesaikan masalah nyata.</p>
 
+      <div class="filter-bar" role="group" aria-label="Filter proyek">
+        <button type="button" data-filter="all" aria-pressed="true">Semua</button>
+        <button type="button" data-filter="backend" aria-pressed="false">Backend</button>
+        <button type="button" data-filter="frontend" aria-pressed="false">Frontend</button>
+      </div>
+      <p class="project-count" role="status" id="projectCount"></p>
       <div class="projects-grid">
 
         <article class="project-card reveal">
@@ -430,8 +440,8 @@
           <h3>Absen QR</h3>
           <p>
             Absensi kelas dengan kode 6 karakter yang <strong>berputar tiap 30 detik</strong>,
-            diturunkan lewat HMAC-SHA256 dari kunci sesi. Kode yang difoto lalu dikirim ke
-            teman sudah kedaluwarsa sebelum sempat dipakai.
+            diturunkan lewat HMAC-SHA256 dari kunci sesi. Prototipe sisi klien untuk mempelajari kode berbatas waktu;
+            bukan jaminan pencegahan titip absen pada sistem produksi.
           </p>
           <div class="tags"><span>JavaScript</span><span>Web Crypto</span><span>QR</span></div>
           <div class="project-links">
@@ -518,7 +528,7 @@
           <h3>Waktu Sholat</h3>
           <p>
             Jadwal sholat yang <strong>dihitung sendiri dari posisi matahari</strong>, bukan diambil
-            dari API — hasilnya sama dengan jadwal Kemenag sampai ke menit. Ada pengingat adzan
+            dari API. Waktu bersifat estimasi; cocokkan dengan jadwal resmi setempat. Ada pengingat adzan
             dengan suara, lafaz Subuh “ash-shalatu khairun minan-naum”, kompas kiblat dengan
             penanda Ka'bah, dan tasbih digital.
           </p>
@@ -680,6 +690,7 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js?v=atelier1"></script>
+<script src="atelier.js?v=atelier1"></script>
 </body>
 </html>
