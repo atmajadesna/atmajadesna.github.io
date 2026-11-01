@@ -16,7 +16,7 @@
     if (btn) {
       btn.setAttribute(
         "aria-label",
-        theme === "dark" ? "Ganti ke tema terang" : "Ganti ke tema gelap"
+        theme === "dark" ? "Switch to light theme" : "Switch to dark theme"
       );
     }
   }
@@ -61,7 +61,7 @@
       toggle.setAttribute("aria-expanded", String(isOpen));
       toggle.setAttribute(
         "aria-label",
-        isOpen ? "Tutup menu" : "Buka menu"
+        isOpen ? "Close menu" : "Open menu"
       );
     });
 
@@ -70,6 +70,7 @@
       link.addEventListener("click", function () {
         menu.classList.remove("open");
         toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Open menu");
       });
     });
   }
